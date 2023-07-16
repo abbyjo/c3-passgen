@@ -1,8 +1,8 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 var criteria = {
-  lowercase: "abcdefghijklmnopqrstuvwxyz",
-  uppercase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
+  lowerCase: "abcdefghijklmnopqrstuvwxyz",
+  upperCase: "ABCDEFGHIJKLMNOPQRSTUVWXYZ",
   numeric: "0123456789",
   symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-=",
 }
@@ -13,11 +13,11 @@ function writePassword() {
 
   passwordText.value = password;
   function generatePassword () {(console.log("placeholder!"))};
-  prompt ("Set password length! Enter a number between 8 and 128~", "8");
-  prompt ("Would you like to include lowercase characters?", "Yes/No");
-  prompt ("Would you like to include uppercase characters?", "Yes/No");
-  prompt ("Would you like to include any numbers?", "Yes/No");
-  prompt ("Would you like to include special characters?", "Yes/No");
+  let pwLength = prompt ("Set password length! Enter a number between 8 and 128~", "8");
+  let pwLower = prompt ("Would you like to include lowercase characters?", "Yes or No");
+  let pwUpper = prompt ("Would you like to include uppercase characters?", "Yes or No");
+  let pwNum = prompt ("Would you like to include any numbers?", "Yes or No");
+  let pwSpecial = prompt ("Would you like to include special characters?", "Yes or No");
 }
 
 // Add event listener to generate button
