@@ -7,11 +7,11 @@ var criteria = {
   symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-=",
 }
 //Functions to randomize selection of characters 
-var critSelect = [
-  function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)];},
-  function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)];},
-  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)];},
-  function symbol() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)];}
+var critRandom = [
+  function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)]},
+  function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)]},
+  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)]},
+  function symbol() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)]}
 ]
 
 // Write password to the #password input
@@ -30,7 +30,12 @@ function writePassword() {
   if (pwLower + pwUpper + pwNum + pwSpecial === 0) {
     alert("No criteria selected. Please select at least one!")
   }
-  function generatePassword () {(console.log("placeholder!"))};
+  //Password generation function
+  function generatePassword () {
+    (console.log("placeholder!"))
+  
+  
+  };
 }
 
 // Add event listener to generate button
