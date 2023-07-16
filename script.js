@@ -6,6 +6,14 @@ var criteria = {
   numeric: "0123456789",
   symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-=",
 }
+//Functions to randomize selection of characters 
+var critSelect = [
+  function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)];},
+  function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)];},
+  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)];},
+  function symbol() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)];}
+]
+
 // Write password to the #password input
 function writePassword() {
   var password = generatePassword();
