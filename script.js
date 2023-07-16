@@ -14,10 +14,10 @@ function writePassword() {
   passwordText.value = password;
   function generatePassword () {(console.log("placeholder!"))};
   let pwLength = prompt ("Set password length! Enter a number between 8 and 128~", "8");
-  let pwLower = prompt ("Would you like to include lowercase characters?", "Yes or No");
-  let pwUpper = prompt ("Would you like to include uppercase characters?", "Yes or No");
-  let pwNum = prompt ("Would you like to include any numbers?", "Yes or No");
-  let pwSpecial = prompt ("Would you like to include special characters?", "Yes or No");
+  let pwLower = confirm ("Would you like to include lowercase characters? \nPress OK for Yes, Cancel for No");
+  let pwUpper = confirm ("Would you like to include uppercase characters? \nPress OK for Yes, Cancel for No");
+  let pwNum = confirm ("Would you like to include any numbers? \nPress OK for Yes, Cancel for No");
+  let pwSpecial = confirm ("Would you like to include special characters? \nPress OK for Yes, Cancel for No");
 }
 
 // Add event listener to generate button
