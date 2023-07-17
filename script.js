@@ -17,6 +17,7 @@ var critRandom = [
 ]
 //Function to generate password 
 function generatePassword () {
+  password="";
 //Series of prompts for user input
   let pwLengthStr = prompt ("Set password length! Enter a number between 8 and 128~", "8");
   let pwLength = Number(pwLengthStr);
@@ -31,7 +32,7 @@ function generatePassword () {
     if (pwLower + pwUpper + pwNum + pwSpecial === 0) {
       alert("No criteria selected. Please select at least one!")
     }
-    return;
+  return password;
 };
 
 // Write password to the #password input
