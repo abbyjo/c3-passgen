@@ -8,17 +8,16 @@ var criteria = {
   numeric: "0123456789",
   symbols: "!@#$%^&*()_+~\`|}{[]:;?><,./-=",
 } 
-//Array containing randomization functions
-var critRandom = [
-  function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)]},
-  function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)]},
-  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)]},
+//Randomization functions
+  function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)]};
+  function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)]};
+  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)]};
   function symbol() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)]}
-]
+
 //Function to generate password 
 function generatePassword () {
   password="";
-//Series of prompts for user input
+  //Series of prompts for user input
   let pwLengthStr = prompt ("Set password length! Enter a number between 8 and 128~", "8");
   let pwLength = Number(pwLengthStr);
     if (pwLength<8 || pwLength >128) {
@@ -32,6 +31,8 @@ function generatePassword () {
     if (pwLower + pwUpper + pwNum + pwSpecial === 0) {
       alert("No criteria selected. Please select at least one!")
     }
+  for (i=0; password.length< pwLength; i++)
+    if (pwLower) {password += lower() };
   return password;
 };
 
