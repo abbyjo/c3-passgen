@@ -11,8 +11,8 @@ var criteria = {
 //Randomization functions
   function lower() {return criteria.lowerCase[Math.floor(Math.random() * criteria.lowerCase.length)]};
   function upper() {return criteria.upperCase[Math.floor(Math.random() * criteria.upperCase.length)]};
-  function number() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)]};
-  function symbol() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)]}
+  function num() {return criteria.numeric[Math.floor(Math.random() * criteria.numeric.length)]};
+  function special() {return criteria.symbols[Math.floor(Math.random() * criteria.symbols.length)]}
 
 //Function to generate password 
 function generatePassword () {
@@ -31,8 +31,12 @@ function generatePassword () {
     if (pwLower + pwUpper + pwNum + pwSpecial === 0) {
       alert("No criteria selected. Please select at least one!")
     }
-  for (i=0; password.length< pwLength; i++)
-    if (pwLower) {password += lower() };
+  for (i=0; password.length < pwLength; i++){
+    if (pwLower) {password += lower()}
+    else if (pwUpper){password += upper()}
+    else if (pwNum){password += num()}
+    else if (pwSpecial){password += special()}
+  }
   return password;
 };
 
