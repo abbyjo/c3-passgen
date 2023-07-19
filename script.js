@@ -32,7 +32,21 @@ function generatePassword () {
       alert("No criteria selected. Please select at least one!")
     }
   for (i=0; password.length < pwLength; i++){
-    if (pwLower) {password += lower()}
+    if (pwLower && pwUpper && pwNum && pwSpecial){password += lower() + upper() + num() + special()}
+    //2 Selections
+    else if (pwLower && pwUpper) {password += lower() + upper()}
+    else if (pwLower && pwNum) {password += lower() + num()}
+    else if (pwLower && pwSpecial) {password += lower() + special()}
+    else if (pwUpper && pwNum) {password += lower() + num()}
+    else if (pwUpper && pwSpecial){password += upper() + special()}
+    else if (pwNum && pwSpecial){password += num() + special()}
+    //3 Selections
+    else if (pwLower && pwUpper && pwNum ){password += lower() + upper() + num()}
+    else if (pwLower && pwUpper && pwSpecial ){password += lower() + upper() + special()}
+    else if (pwLower && pwNum && pwSpecial){password += lower() + num() + special()}
+    else if (pwUpper&& pwNum && pwSpecial){password += upper() + num() + special()}
+    //One Selection
+    else if (pwLower){password += lower()}
     else if (pwUpper){password += upper()}
     else if (pwNum){password += num()}
     else if (pwSpecial){password += special()}
