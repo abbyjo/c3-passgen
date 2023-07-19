@@ -1,16 +1,16 @@
 # Random Password Generator
 JS Challenge: Password Generator
 
-## Description
-This is a simple web based password generator that allows you to create a random password based on user input. You may choose the password's length and which characters you would like to include in the final result! Learned a lot about Javascript and the depths of despair with this project~ 
-
 ## Installation
 
 N/A
 
+## Description
+This is a simple web based password generator that allows you to create a random password based on user input. You may choose the password's length and which characters you would like to include in the final result! Learned a lot about Javascript and the depths of despair with this project~ 
+
 ## Usage
 
-Click the "Generate Password" button and answer the prompts! The generated password will appear on the screen for you to copy.    
+Open the <a href="https://abbyjo.github.io/c3-passgen/">deployed page</a> on your favorite browser, click the "Generate Password" button and answer the prompts! The generated password will appear on the screen for you to copy.    
 
 ## Credits
 
