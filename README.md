@@ -10,6 +10,7 @@ This is a simple web based password generator that allows you to create a random
 
 ## Usage
 
+![Screenshot of plain password generator and big red button](screenshot.png)
 Open the <a href="https://abbyjo.github.io/c3-passgen/">deployed page</a> on your favorite browser, click the "Generate Password" button and answer the prompts! The generated password will appear on the screen for you to copy.    
 
 ## Credits
